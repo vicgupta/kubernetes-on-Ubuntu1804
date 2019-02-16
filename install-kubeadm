@@ -1,0 +1,12 @@
+#Docker
+sudo apt install docker.io
+sudo systemctl enable docker
+
+#Kubeadm
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
+sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
+sudo apt install kubeadm
+sudo swapoff -a
+sudo kubeadm init --pod-network-cidr=10.10.0.0/16
+
+kubectl apply -f https://docs.projectcalico.org/v3.5/getting-started/kubernetes/installation/hosted/calico.yaml
