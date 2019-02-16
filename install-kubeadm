@@ -9,4 +9,5 @@ sudo apt install kubeadm
 sudo swapoff -a
 sudo kubeadm init --pod-network-cidr=10.10.0.0/16
 
+#Calico
 kubectl apply -f https://docs.projectcalico.org/v3.5/getting-started/kubernetes/installation/hosted/calico.yaml
